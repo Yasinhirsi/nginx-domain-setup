@@ -1,23 +1,29 @@
-Step-by-Step Setup
+## Step-by-Step Setup
 
-Registered domain at Cloudflare: yasinhirsi.com
+1. **Registered domain** on Cloudflare:
+   - Chose `yasinhirsi.com` and registered it using Cloudflare's domain registration service
+   - Used Cloudflare's DNS management to control records
 
-Launched EC2 Ubuntu 24.04 instance via AWS
+2. **Launched an EC2 instance** on AWS:
+   - Chose **Ubuntu 24.04 LTS** as the base OS
+   - Used the **t2.micro** instance type (eligible for free tier)
+   - Created and downloaded a new key pair for SSH access
+   - Configured security group to allow:
+     - **Port 22 (SSH)** — for terminal access
+     - **Port 80 (HTTP)** — for web traffic
 
-Installed NGINX on EC2: sudo apt update
-
+3. **Installed NGINX** on the EC2 instance:
+   ```bash
+   sudo apt update
    sudo apt install nginx -y
+Verified NGINX was running by visiting the EC2 public IP in a browser
 
-Verified NGINX page at EC2 public IP
+4. **Set up DNS in Cloudflare:**
+   - Created an A record pointing nginx.yasinhirsi.com to the EC2 public IPv4 address
+   - Configured the record as DNS only (proxy disabled)
 
-Created A record on Cloudflare:
-
-Type: A
-
-Name: nginx
-
-IP: 13.41.157.242
-
-Confirmed site live at: http://nginx.yasinhirsi.com
+5. **Tested the setup:**
+   - Opened http://nginx.yasinhirsi.com in a browser
+   - Confirmed the default "Welcome to NGINX" page was served successfull
 
 
