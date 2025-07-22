@@ -3,6 +3,9 @@
 ## Live Demo
 🌍 http://nginx.yasinhirsi.com
 
+<img width="1440" height="900" alt="nginx welcome" src="https://github.com/user-attachments/assets/46561c6f-ccff-4d7b-9d76-e3e0dc0560e6" />
+
+
 ## 📖 What I Did (Detailed Breakdown)
 Registered a custom domain
 
